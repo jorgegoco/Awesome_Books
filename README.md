@@ -8,7 +8,7 @@ HTML, and JavaScript
 
 ## Live Demo 
 
-[Live Demo Link](https://jorgegoco.github.io/Awesome_books/)
+[Live Demo Link](https://jorgegoco.github.io/Awesome_Books/)
 
 ## Getting Started
 
