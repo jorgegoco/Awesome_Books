@@ -1,4 +1,4 @@
-let books = [];
+let books = JSON.parse(localStorage.getItem('booksData'));
 
 function Book(title, author) {
   this.title = title;
@@ -49,7 +49,7 @@ function reLoad() {
     });
   });
 }
-
+reLoad();
 const form = document.querySelector('.form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
