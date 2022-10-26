@@ -1,7 +1,6 @@
 class Collection {
 
   constructor() {
-    // this.arr = new Array();
     this.arr = JSON.parse(localStorage.getItem('booksData')) || [];
   }
 
@@ -26,22 +25,19 @@ const bookList = document.querySelector('.book-list');
 function reLoad() {
   bookList.replaceChildren();
   for (let i = 0; i < books.length; i += 1) {
-    const h2 = document.createElement('h2');
-    const h2Text = document.createTextNode(`${books[i].title}`);
-    h2.appendChild(h2Text);
-    bookList.appendChild(h2);
-    const h3 = document.createElement('h3');
-    const h3Text = document.createTextNode(`${books[i].author}`);
-    h3.appendChild(h3Text);
-    bookList.appendChild(h3);
+    const div = document.createElement('div');
+    div.className = 'book-element';
+    const p = document.createElement('p');
+    const pText = document.createTextNode(`${books[i].title} by ${books[i].author}`);
+    p.appendChild(pText);
+    div.appendChild(p);
     const button = document.createElement('button');
     button.className = 'button';
     button.id = `button${i}`;
     const buttonText = document.createTextNode('Remove');
     button.appendChild(buttonText);
-    bookList.appendChild(button);
-    const hr = document.createElement('hr');
-    bookList.appendChild(hr);
+    div.appendChild(button);
+    bookList.appendChild(div);
   }
   const allButtons = Array.from(document.querySelectorAll('.button'));
   allButtons.forEach((allButton) => {
