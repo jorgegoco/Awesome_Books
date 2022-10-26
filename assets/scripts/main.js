@@ -7,8 +7,8 @@ class Collection {
     this.arr.push({ title, author });
   }
 
-  removeBook(title, author) {
-    this.arr = this.arr.filter((elem) => elem.title !== title && elem.author !== author);
+  removeBook(index){
+    this.arr.splice(index, 1);
   }
 
   get booksList() {
@@ -44,7 +44,7 @@ function reLoad() {
       iButton = Number(iButton.replace(/\D/g, ''));
       const { title } = books[iButton];
       const { author } = books[iButton];
-      firstCollection.removeBook(title, author);
+      firstCollection.removeBook(iButton);
       books = firstCollection.booksList;
       localStorage.setItem('booksData', JSON.stringify(books));
       reLoad();
