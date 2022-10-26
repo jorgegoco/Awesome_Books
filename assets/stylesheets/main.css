@@ -48,12 +48,12 @@
 header {
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .book-list {
-  width: 50%;
-  height: 300px;
+  width: 90%;
+  height: 60vh;
   margin: auto;
   border: 3px solid black;
   display: flex;
@@ -78,14 +78,6 @@ div div:nth-child(odd) {
   border: 3px solid black;
   background: white;
   cursor: pointer;
-}
-
-.black-line {
-  border-bottom: 3px solid black;
-  width: 20%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .form {
@@ -117,7 +109,7 @@ div div:nth-child(odd) {
 .footer {
   width: 90%;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 10px;
   padding: 4px;
   display: flex;

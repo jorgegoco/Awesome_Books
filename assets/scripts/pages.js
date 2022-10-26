@@ -1,9 +1,5 @@
-let datetime = new Date();
-document.querySelector('.date-time').textContent = datetime;
-function refreshTime() {
-  const timeDisplay = document.querySelector('.date-time');
-  const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(", ", " - ");
-  timeDisplay.textContent = formattedString;
+startPage();
+function startPage() {
+  document.querySelector('.form').style.display = 'none';
+
 }
-  setInterval(refreshTime, 1000);
