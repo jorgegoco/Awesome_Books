@@ -80,6 +80,18 @@ div div:nth-child(odd) {
   cursor: pointer;
 }
 
+.contact-section {
+  width: 50%;
+  height: 60vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  font-size: 20px;
+}
+
 .form {
   width: 50%;
   height: 60vh;
@@ -92,7 +104,7 @@ div div:nth-child(odd) {
 
 .form input {
   border: 3px solid #454646;
-  padding: 4px;
+  padding: 8px;
   width: 100%;
 }
 
