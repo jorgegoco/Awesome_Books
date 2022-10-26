@@ -81,7 +81,8 @@ div div:nth-child(odd) {
 }
 
 .form {
-  width: 40%;
+  width: 50%;
+  height: 60vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -89,12 +90,9 @@ div div:nth-child(odd) {
   align-items: center;
 }
 
-.form h1 {
-  margin-bottom: 30px;
-}
-
 .form input {
-  border: 2px solid #454646;
+  border: 3px solid #454646;
+  padding: 4px;
   width: 100%;
 }
 
