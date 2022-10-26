@@ -1,17 +1,16 @@
 class Collection {
-
   constructor() {
     this.arr = JSON.parse(localStorage.getItem('booksData')) || [];
   }
 
   addBook(title, author) {
-      this.arr.push({ title, author });
+    this.arr.push({ title, author });
   }
 
   removeBook(title, author) {
-  this.arr = this.arr.filter((elem) => elem['title'] !== title && elem['author'] !== author);
+    this.arr = this.arr.filter((elem) => elem.title !== title && elem.author !== author);
   }
-  
+
   get booksList() {
     return this.arr;
   }
@@ -20,7 +19,6 @@ class Collection {
 const firstCollection = new Collection();
 let books = firstCollection.booksList;
 const bookList = document.querySelector('.book-list');
-
 
 function reLoad() {
   bookList.replaceChildren();
