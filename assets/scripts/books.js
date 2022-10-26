@@ -1,4 +1,4 @@
-let books = JSON.parse(localStorage.getItem('booksData')) || [];
+const books = JSON.parse(localStorage.getItem('booksData')) || [];
 
 function Book(title, author) {
   this.title = title;

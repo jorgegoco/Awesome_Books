@@ -1,5 +1,3 @@
-startPage();
-
 function startPage() {
   document.querySelector('.book-list').style.display = 'flex';
   document.querySelector('.header-list').style.display = 'block';
@@ -27,6 +25,7 @@ function contactPage() {
   document.querySelector('.form').style.display = 'none';
 }
 
+startPage();
 document.querySelector('.button-list').addEventListener('click', startPage);
 document.querySelector('.button-add').addEventListener('click', addPage);
 document.querySelector('.button-contact').addEventListener('click', contactPage);
