@@ -1,23 +1,19 @@
-class Collection {
-  constructor() {
-    this.arr = JSON.parse(localStorage.getItem('booksData')) || [];
-  }
+let books = JSON.parse(localStorage.getItem('booksData')) || [];
 
-  addBook(title, author) {
-    this.arr.push({ title, author });
-  }
-
-  removeBook(index) {
-    this.arr.splice(index, 1);
-  }
-
-  get booksList() {
-    return this.arr;
-  }
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
 }
 
-const firstCollection = new Collection();
-let books = firstCollection.booksList;
+function addBook(title, author) {
+  const newBook = new Book(title, author);
+  books.push(newBook);
+}
+
+function removeBook(index) {
+  books.splice(index, 1);
+}
+
 const bookList = document.querySelector('.book-list');
 
 function reLoad() {
@@ -42,8 +38,7 @@ function reLoad() {
     allButton.addEventListener('click', () => {
       let iButton = allButton.id;
       iButton = Number(iButton.replace(/\D/g, ''));
-      firstCollection.removeBook(iButton);
-      books = firstCollection.booksList;
+      removeBook(iButton);
       localStorage.setItem('booksData', JSON.stringify(books));
       reLoad();
     });
@@ -55,7 +50,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = form.elements[0].value;
   const author = form.elements[1].value;
-  firstCollection.addBook(title, author);
+  addBook(title, author);
   localStorage.setItem('booksData', JSON.stringify(books));
   form.reset();
   reLoad();
