@@ -7,7 +7,7 @@ class Collection {
     this.arr.push({ title, author });
   }
 
-  removeBook(index){
+  removeBook(index) {
     this.arr.splice(index, 1);
   }
 
@@ -42,8 +42,6 @@ function reLoad() {
     allButton.addEventListener('click', () => {
       let iButton = allButton.id;
       iButton = Number(iButton.replace(/\D/g, ''));
-      const { title } = books[iButton];
-      const { author } = books[iButton];
       firstCollection.removeBook(iButton);
       books = firstCollection.booksList;
       localStorage.setItem('booksData', JSON.stringify(books));
